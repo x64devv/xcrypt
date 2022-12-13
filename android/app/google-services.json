@@ -1,0 +1,46 @@
+{
+  "project_info": {
+    "project_number": "1070877916589",
+    "project_id": "xcrypt-71167",
+    "storage_bucket": "xcrypt-71167.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1070877916589:android:616832ad4fb0e2c415b524",
+        "android_client_info": {
+          "package_name": "com.x64dev.xcrypt"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1070877916589-iu6gian0ogu6ri8d4m3cds0f4lms682r.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAcIElYpUpl5zxVbYliHjAULGf3jcHvw7g"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1070877916589-iu6gian0ogu6ri8d4m3cds0f4lms682r.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1070877916589-svfghsledpvndbc9rboi0jbds6aquts7.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.x64dev.xcrypt"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
