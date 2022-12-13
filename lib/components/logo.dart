@@ -23,7 +23,7 @@ class Logo extends StatelessWidget {
           ),
           child: Center(
             child: GradientText(
-              gradient: LinearGradient(
+              gradient: const LinearGradient(
                   colors: [kPrimaryColor, kPrimaryDarkColor], begin: Alignment.center, end: Alignment.centerRight),
               text: "X",
               style: GoogleFonts.poppins(fontSize: 18, color: kPrimaryColor, fontWeight: FontWeight.w900),
@@ -31,7 +31,7 @@ class Logo extends StatelessWidget {
           ),
         ),
         Text(
-          "Wallet",
+          "Crypt",
           style: GoogleFonts.poppins(fontSize: 20, fontWeight: FontWeight.w900, color: kAccentColor),
         ),
       ],

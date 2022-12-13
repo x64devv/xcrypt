@@ -1,16 +1,14 @@
 # xcrypt
+This is a blockchain wallet created with flutter which allows you to create and manage your crypto wallets. 
+It also allows you to transact on the blockchain securely and safely
 
-A new Flutter project.
+The app is currently running on the sepolia dev net
 
-## Getting Started
+It still contains bugs (work in progress)
 
-This project is a starting point for a Flutter application.
+web3dart is the library for communicating with the blockchain and in Infura is providing the rpc endpoint to the 
+ethereum node!
 
-A few resources to get you started if this is your first Flutter project:
+xcrypt also features crypto price tracking with Minute, Hour and Daily price charts.
 
-- [Lab: Write your first Flutter app](https://docs.flutter.dev/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://docs.flutter.dev/cookbook)
-
-For help getting started with Flutter development, view the
-[online documentation](https://docs.flutter.dev/), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
+prices are provided by crypto compare.
