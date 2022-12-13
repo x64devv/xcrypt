@@ -4,7 +4,7 @@ import 'dart:math';
 import 'package:http/http.dart';
 import 'package:web3dart/web3dart.dart';
 
-const sepolia = "https://rpc.sepolia.dev";
+const sepolia = "https://sepolia.infura.io/v3/8cb4b2a04007438199f1c4ab72fc6324";
 var httpClient = Client();
 final web3Client = Web3Client(sepolia, httpClient);
 
@@ -26,14 +26,12 @@ class Web3Services {
   }
 
   Future<double> getBalance(Credentials creds) async {
-    print("Balance : Checking call....");
     EtherAmount balance = await web3Client.getBalance(creds.address);
-    print("Balance: after calll.....");
     return balance.getValueInUnit(EtherUnit.ether);
   }
 
   Future<String> sendTransaction(
-      Credentials sender, String receiver, double amount) async {
+      Credentials sender, String receiver, String amount) async {
     return await web3Client.sendTransaction(
       sender,
       Transaction(

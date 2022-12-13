@@ -221,13 +221,13 @@ class _BodyState extends State<Body> {
                       width: size.width * 0.46,
                       icon: Icons.paste_outlined,
                       onTap: () {
-                        showModalBottomSheet(
+                        showBottomSheet(
                           backgroundColor: Colors.transparent,
                           context: context,
                           builder: (context) {
-                            TextEditingController addressController =
+                            final TextEditingController addressController =
                                 TextEditingController();
-                            TextEditingController amountController =
+                            final TextEditingController amountController =
                                 TextEditingController();
                             Clipboard.getData('text/plain').then((data) {
                               try {
@@ -237,6 +237,7 @@ class _BodyState extends State<Body> {
                               }
                             });
                             return Container(
+                              height: size.height*0.45,
                               decoration: const BoxDecoration(
                                 color: kPrimaryColor,
                                 borderRadius: BorderRadius.only(
@@ -259,6 +260,7 @@ class _BodyState extends State<Body> {
                                   ),
                                   Container(
                                     margin: const EdgeInsets.all(8),
+                                    padding: const EdgeInsets.all(8),
                                     decoration: BoxDecoration(
                                       color: kAccentColor,
                                       borderRadius: BorderRadius.circular(16),
@@ -276,6 +278,7 @@ class _BodyState extends State<Body> {
                                   ),
                                   Container(
                                     margin: const EdgeInsets.all(8),
+                                    padding: const EdgeInsets.all(8),
                                     decoration: BoxDecoration(
                                       color: kAccentColor,
                                       borderRadius: BorderRadius.circular(16),
@@ -292,43 +295,46 @@ class _BodyState extends State<Body> {
                                       ),
                                     ),
                                   ),
-                                  XButton(
-                                    text: "Send",
-                                    color: kAccentColor,
-                                    textColor: kPrimaryColor,
-                                    onTap: () {
-                                      ScaffoldMessenger.of(context)
-                                          .showSnackBar(
-                                        SnackBar(
-                                          backgroundColor: Colors.transparent,
-                                          content: Container(
-                                            height: 48,
-                                            color: kPrimaryColor,
-                                            child: Text(
-                                              "Transaction  sent to miners",
-                                              style: GoogleFonts.poppins(),
+                                  Padding(
+                                    padding: const EdgeInsets.all(8.0),
+                                    child: XButton(
+                                      text: "Send",
+                                      color: kAccentColor,
+                                      textColor: kPrimaryColor,
+                                      onTap: () {
+                                        ScaffoldMessenger.of(context)
+                                            .showSnackBar(
+                                          SnackBar(
+                                            backgroundColor: Colors.transparent,
+                                            content: Container(
+                                              height: 48,
+                                              color: kPrimaryColor,
+                                              child: Text(
+                                                "Transaction  sent to miners",
+                                                style: GoogleFonts.poppins(),
+                                              ),
                                             ),
                                           ),
-                                        ),
-                                      );
-                                      SharedPreferences.getInstance()
-                                          .then((prefs) {
-                                        getWalletCreds(prefs
-                                                .getString("currentWallet")!)
-                                            .then((wally) {
-                                          Web3Services()
-                                              .sendTransaction(
-                                            wally!.privateKey,
-                                            addressController.text,
-                                            double.parse(amountController.text),
-                                          )
-                                              .then((result) {
-                                            debugPrint(
-                                                "transaction result: $result");
+                                        );
+                                        SharedPreferences.getInstance()
+                                            .then((prefs) {
+                                          getWalletCreds(prefs
+                                                  .getString("currentWallet")!)
+                                              .then((wally) {
+                                            Web3Services()
+                                                .sendTransaction(
+                                              wally!.privateKey,
+                                              addressController.text,
+                                              amountController.text,
+                                            )
+                                                .then((result) {
+                                              debugPrint(
+                                                  "transaction result: $result");
+                                            });
                                           });
                                         });
-                                      });
-                                    },
+                                      },
+                                    ),
                                   ),
                                 ],
                               ),
