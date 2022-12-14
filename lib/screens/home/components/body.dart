@@ -201,12 +201,6 @@ class _BodyState extends State<Body> {
                   mainAxisAlignment: MainAxisAlignment.start,
                   children: [
                     const AddContact(),
-                    ...List.generate(
-                        contacts.length,
-                        (index) => CircularContactCard(
-                            name: contacts[index]["name"]!,
-                            image:
-                                "assets/images/${contacts[index]["image"]!}"))
                   ],
                 ),
               ),

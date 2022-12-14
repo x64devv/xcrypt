@@ -12,3 +12,7 @@ ethereum node!
 xcrypt also features crypto price tracking with Minute, Hour and Daily price charts.
 
 prices are provided by crypto compare.
+
+##Screenshots
+
+[Home Screen fist login]: fresh_home.png

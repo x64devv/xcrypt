@@ -63,16 +63,16 @@ class _NavScreenState extends State<NavScreen> {
                   Icons.data_thresholding_rounded,
                 ),
                 label: "Market"),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.chat_bubble_rounded,
-                ),
-                label: "Chat"),
-            BottomNavigationBarItem(
-                icon: Icon(
-                  Icons.account_circle_rounded,
-                ),
-                label: "Profile"),
+            // BottomNavigationBarItem(
+            //     icon: Icon(
+            //       Icons.chat_bubble_rounded,
+            //     ),
+            //     label: "Chat"),
+            // BottomNavigationBarItem(
+            //     icon: Icon(
+            //       Icons.account_circle_rounded,
+            //     ),
+            //     label: "Profile"),
           ],
         ),
       ),
